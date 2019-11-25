@@ -1,0 +1,115 @@
+.logo {
+  display:inline-block;
+}
+
+.logo h1 {
+  text-transform: uppercase;
+  font-weight: 400;
+  display: inline-block;
+  border: 2px solid $red;
+  padding: 5px 10px;
+  letter-spacing: 2px;
+  font-size: 15px;
+  position: relative;
+  padding-right: 28px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: $dark-grey;
+  float: left;
+  .small {
+    font-size: 10px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+  }
+}
+
+header {
+	padding: 30px 0px;
+  @include clearfix;
+
+  .header-details {
+    text-align: right;
+    line-height: 20px;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+
+    @media (min-width: 768px) {
+      right: 30px;
+    }
+
+    .icon-cart, .price, .cart-count {
+      display: none;
+    }
+
+    @media (min-width: 450px) {
+      .icon-cart, .price, .cart-count {
+        display: inline-block;
+      }
+    }
+
+    & > *{
+      display: inline-block;
+    }
+    .icon-cart {
+      width: 20px;
+      max-width: 100%;
+      margin-right: 13px;
+      line-height: 20px;
+      top: 2px;
+    }
+    .price {
+      margin-right: 10px;
+      line-height: 20px;
+      font-size: 14px;
+    }
+    .cart-count {
+      height: 18px;
+      width: 18px;
+      line-height: 19px;
+      top: -1px;
+    }
+    .menu-button {
+      width: 25px;
+      top: 3px;
+      max-width: 100%;
+      margin-left: 60px;
+      cursor: pointer;
+    }
+  }
+}
+
+/**
+ * Page Banner
+ */
+.banner {
+	width: 100%;
+	max-width: 100%;
+	background-size: cover;
+	background-position: center top;
+	margin-bottom: 60px;
+
+  &.banner-desktop {
+    display: none;
+  }
+
+  @media (min-width: 1100px) {
+    &.banner-mobile {
+      display: none;
+    }
+    &.banner-desktop {
+      display: block;
+      height: 400px;
+      width: 100%;
+      background-size: cover;
+    }
+  }
+  @media (min-width: 1500px) {
+    &.banner-desktop {
+      height: 600px
+    }
+  }
+}

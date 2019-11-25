@@ -1,0 +1,58 @@
+/**
+ * Variables
+ */
+$red: #af5867;
+$dark-grey: #1e1e1e;
+$medium-grey: #e8e8e8;
+$light-grey: #F5F3F6;
+$background-color: $light-grey;
+
+/**
+ * Helpers
+ */
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin box-shadow {
+	box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.1);
+}
+
+
+* {
+	position: relative;
+	box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	background-color: $background-color;
+	color: $dark-grey;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	margin: 0px;
+}
+
+p {
+	font-size: 16px;
+}
+
+/**
+ * Layout
+ */
+.container {
+	width: 1400px;
+	max-width: 100%;
+	padding: 0px 15px;
+	margin: 0 auto;
+  @include clearfix;
+
+  @media (min-width: 768px) {
+    padding: 0px 30px;
+  }
+}
